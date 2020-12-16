@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "name": "CartItem"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "product": {
+      "model": "product"
+    },
+    "cart": {
+      "model": "cart",
+      "via": "items"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "productId": {
+      "type": "string"
+    },
+    "subId": {
+      "type": "string"
+    }
+  }
+}

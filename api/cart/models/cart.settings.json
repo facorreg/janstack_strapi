@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carts",
+  "info": {
+    "name": "Cart"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "userId": {
+      "type": "uid"
+    },
+    "items": {
+      "via": "cart",
+      "collection": "item"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "cart"
+    }
+  }
+}
